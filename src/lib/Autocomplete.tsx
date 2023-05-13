@@ -16,6 +16,11 @@ function Autocomplete() {
     console.log(e);
   }
 
+  function handleSearchClick() {
+    // Handle the click event here
+    console.log("Search icon clicked!");
+  }
+
   return (
     <div className="search-bar">
       <input
@@ -24,7 +29,11 @@ function Autocomplete() {
         className="search-input"
         onChange={handleChange}
       />
-      <FontAwesomeIcon icon={faSearch} />
+      <FontAwesomeIcon
+        icon={faSearch}
+        className="search-icon"
+        onClick={handleSearchClick}
+      />
     </div>
   );
 }
